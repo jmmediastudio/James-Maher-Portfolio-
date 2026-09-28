@@ -344,3 +344,14 @@ h2 { font-size: clamp(32px, 4.4vw, 60px); line-height: 1.02; max-width: 18ch; }
 @media (max-width: 640px) {
   .tee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 4px; }
 }
+
+/* GUAIRE Photoshop mockups: a pair in one frame */
+.mock-pair {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px -12px rgba(0,0,0,.18);
+  outline: 2px solid transparent;
+  transition: outline-color .15s;
+}
+.frame .mock-pair img { box-shadow: none; outline: 0; width: 100%; }
+.frame:hover .mock-pair { outline-color: var(--select); }
+@media (max-width: 640px) { .mock-pair { grid-template-columns: 1fr; } }
